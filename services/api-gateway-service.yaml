@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: fleetman-webapp
+  name: fleetman-api-gateway
 spec:
   selector:
     matchLabels:
-      app:  webapp
+      app:  api-gateway
   replicas: 1
   template:
     metadata:
       labels:
-        app:  webapp
+        app: api-gateway
     spec:
       containers:
-      - name:  webapp
-        image: richardchesterwood/k8s-fleetman-webapp-angular:release1
+      - name:  api-gateway
+        image: richardchesterwood/k8s-fleetman-api-gateway:release2
         env:
           - name: SPRING_PROFILES_ACTIVE
             value: production-microservice
@@ -22,12 +22,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: fleetman-webapp
+  name: fleetman-api-gateway
 spec:
   selector:
-    app: webapp
+    app: api-gateway
   type: NodePort
   ports:
     - name: http
-      port: 80
-      nodePort: 30040
+      port: 8080
+      nodePort: 30030
