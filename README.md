@@ -25,3 +25,11 @@
 - image: `richardchesterwood/k8s-fleetman-api-gateway:release1`
 - Expose port 8080 to test the interface
 - Requires the environment variable `SPRING_PROFILES_ACTIVE=production-microservice`.
+
+
+
+## Webapp Service
+
+- image: `richardchesterwood/k8s-fleetman-webapp-angular:release1`
+- Expose port 80
+- Requires the environment variable `SPRING_PROFILES_ACTIVE=production-microservice`.
