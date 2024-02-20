@@ -18,3 +18,10 @@
 - image: `richardchesterwood/k8s-fleetman-position-tracker:release1`
 - Expose port 8080 to test the interface
 - Requires the environment variable `SPRING_PROFILES_ACTIVE=production-microservice`.
+
+
+## API Gateway Tracker Service
+
+- image: `richardchesterwood/k8s-fleetman-api-gateway:release1`
+- Expose port 8080 to test the interface
+- Requires the environment variable `SPRING_PROFILES_ACTIVE=production-microservice`.
