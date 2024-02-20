@@ -12,3 +12,9 @@
 - Simulates positional data using the image `richardchesterwood/k8s-fleetman-position-simulator:release1`.
 - Operates silently without exposed ports.
 - Requires the environment variable `SPRING_PROFILES_ACTIVE=production-microservice`.
+
+## Position Tracker Service
+
+- image: `richardchesterwood/k8s-fleetman-position-tracker:release1`
+- Expose port 8080 to test the interface
+- Requires the environment variable `SPRING_PROFILES_ACTIVE=production-microservice`.
